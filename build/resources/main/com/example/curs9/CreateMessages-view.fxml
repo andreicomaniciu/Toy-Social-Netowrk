@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.curs9.CreateMessageController">
+   <children>
+      <BorderPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #d3f3ee; -fx-border-color: #2F4858;">
+         <top>
+            <HBox prefHeight="82.0" prefWidth="900.0" style="-fx-background-color: #76bed0;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="99.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: -6;">
+                     <image>
+                        <Image url="@images/SpicedLogo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="S" wrappingWidth="20.13671875">
+                     <font>
+                        <Font name="Tw Cen MT" size="44.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="p" wrappingWidth="23.13671875">
+                     <font>
+                        <Font name="Tw Cen MT" size="44.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="i" wrappingWidth="8.13671875">
+                     <font>
+                        <Font name="Tw Cen MT" size="44.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="c" wrappingWidth="15.13671875">
+                     <font>
+                        <Font name="Tw Cen MT" size="44.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Text>
+                  <Text rotate="-20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="e" wrappingWidth="21.908550262451172">
+                     <font>
+                        <Font name="Tw Cen MT" size="46.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Text>
+                  <Text rotate="-20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="e" wrappingWidth="21.908550262451172">
+                     <font>
+                        <Font name="Tw Cen MT" size="46.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Text>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox prefHeight="501.0" prefWidth="235.0" style="-fx-background-color: #76bed0;" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fontSmoothingType="LCD" layoutX="153.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select your &#10;conversation partner(s)!" textAlignment="CENTER" wrappingWidth="357.12890625">
+                     <font>
+                        <Font name="Tw Cen MT Italic" size="43.0" />
+                     </font>
+                  </Text>
+                  <TableView fx:id="tableFriends" layoutX="158.0" layoutY="173.0" prefHeight="224.0" prefWidth="347.0" stylesheets="@css/usersTable.css">
+                     <columns>
+                        <TableColumn fx:id="tableColumnNumeFriend" prefWidth="155.0" text="Nume" />
+                        <TableColumn fx:id="tableColumnPrenumeFriend" minWidth="0.0" prefWidth="164.00003051757812" text="Prenume" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="82.0" layoutY="346.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="142.0" layoutY="417.0" prefHeight="32.0" prefWidth="380.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleCreateConversation" prefHeight="26.0" prefWidth="141.0" stylesheets="@css/login.css" text="Create Conversation" />
+                        <Button mnemonicParsing="false" onAction="#handleAddUser" prefHeight="29.0" prefWidth="116.0" stylesheets="@css/login.css" text="Add to Conversation" />
+                        <TextField fx:id="tfNume" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="541.0" prefWidth="772.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.curs9.CreateMessageController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Text fx:id="textText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+        <font>
+            <Font size="37.0" />
+        </font>
+    </Text>
+    <Accordion />
+    <Pane prefHeight="103.0" prefWidth="732.0">
+        <children>
+            <TextField fx:id="textFieldName" alignment="TOP_LEFT" layoutX="14.0" layoutY="14.0" />
+            <Label layoutX="14.0" layoutY="-8.0" text="Search  friends" />
+        </children>
+    </Pane>
+    <HBox prefHeight="334.0" prefWidth="754.0">
+        <children>
+            <TableView fx:id="tableFriends" prefHeight="190.0" prefWidth="279.0">
+                <columns>
+                    <TableColumn fx:id="tableColumnNumeFriend" prefWidth="71.00001335144043" text="Nume" />
+                    <TableColumn fx:id="tableColumnPrenumeFriend" prefWidth="71.00001335144043" text="Nume" />
+                </columns>
+            </TableView>
+         <VBox prefHeight="250.0" prefWidth="237.0">
+            <children>
+               <HBox prefHeight="25.0" prefWidth="238.0" />
+            </children>
+         </VBox>
+        </children>
+    </HBox>
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+            <Button mnemonicParsing="false" onAction="#handleCreateConversation" text="Create Group">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#handleAddUser" text="Add To Conversation" />
+         <TextField fx:id="tfNume"/>
+      </children>
+   </HBox>
+   <ButtonBar prefHeight="40.0" prefWidth="200.0" />
+</VBox>
