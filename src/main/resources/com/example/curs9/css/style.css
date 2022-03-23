@@ -1,0 +1,53 @@
+.button
+{
+    -fx-text-fill: white;
+    -fx-font-family: "Tw Cen MT";
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    /*-fx-background-color: linear-gradient(#76bed0, #5e98a6);*/
+    -fx-background-color: #76bed0;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 10, 0.0 , 0 , 1 );
+}
+.button:hover
+{
+    -fx-text-fill: white;
+    -fx-font-family: "Tw Cen MT";
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    /*-fx-background-color: linear-gradient(#76bed0, #5e98a6);*/
+    -fx-background-color: #9fd2de;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 10, 0.0 , 0 , 1 );
+}
+.button:pressed
+{
+    -fx-text-fill: white;
+    -fx-font-family: "Tw Cen MT";
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    /*-fx-background-color: linear-gradient(#76bed0, #5e98a6);*/
+    -fx-background-color: #5e98a6;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 10, 0.0 , 0 , 1 );
+}
+.button:focused
+{
+    -fx-text-fill: white;
+    -fx-font-family: "Tw Cen MT";
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    /*-fx-background-color: linear-gradient(#76bed0, #5e98a6);*/
+    -fx-background-color: #5e98a6;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 10, 0.0 , 0 , 1 );
+}
+.label {
+    -fx-font-size: 14px;
+    /*-fx-font-weight:bold;*/
+    -fx-text-fill: #e16b44;
+    -fx-effect: dropshadow( gaussian , rgba(214, 66, 20, 0.5), 0,0,0,1 );
+}
+.table-row-cell:selected {
+    -fx-background-color:#e16b44 ;
+
+}
+.table-row-cell:selected .text {
+    -fx-fill: #ffffff;
+}

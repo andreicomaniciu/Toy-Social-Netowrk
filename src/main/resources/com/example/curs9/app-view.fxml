@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="541.0" prefWidth="772.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.curs9.AppController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Text fx:id="textText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+        <font>
+            <Font size="37.0" />
+        </font>
+    </Text>
+    <Accordion />
+    <Pane prefHeight="134.0" prefWidth="732.0">
+        <children>
+            <TextField fx:id="textFieldName" alignment="TOP_LEFT" layoutX="14.0" layoutY="14.0" />
+            <Label layoutX="14.0" layoutY="-8.0" text="Seacrh users:" />
+            <Button layoutX="38.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleAddNewFriend" text="Add a new friend">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
+            <Label layoutX="445.0" layoutY="-8.0" text="Find a friend:" />
+            <TextField fx:id="textFieldFriend" layoutX="445.0" layoutY="15.0" />
+            <Button layoutX="463.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleRemoveFriend" text="Remove a friend">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        </children>
+    </Pane>
+    <HBox prefHeight="334.0" prefWidth="754.0">
+        <children>
+            <TableView fx:id="tableView" prefHeight="190.0" prefWidth="279.0">
+                <columns>
+                    <TableColumn fx:id="tableColumnNume" prefWidth="75.0" text="Nume" />
+                    <TableColumn fx:id="tableColumnPrenume" prefWidth="75.0" text="Prenume" />
+                    <TableColumn fx:id="tableColumnEmail" prefWidth="75.0" text="Email" />
+                </columns>
+            </TableView>
+            <Accordion prefHeight="471.0" prefWidth="159.0" />
+            <VBox prefHeight="246.0" prefWidth="282.0">
+                <children>
+                    <Label text="Here are your friends!" />
+                    <TableView fx:id="tableFriends" prefHeight="196.0" prefWidth="314.0">
+                        <columns>
+                            <TableColumn fx:id="tableColumnNumeFriend" prefWidth="75.0" text="Nume" />
+                            <TableColumn fx:id="tableColumnPrenumeFriend" prefWidth="75.0" text="Prenume" />
+                            <TableColumn fx:id="tableColumnEmailFriend" prefWidth="75.0" text="Email" />
+                        </columns>
+                    </TableView>
+                    <Label text="Cereri de prietenie primite" />
+                    <TableView fx:id="tableFriendRequestsFrom" prefHeight="181.0" prefWidth="300.0">
+                        <columns>
+                            <TableColumn fx:id="tableColumnFrom" prefWidth="75.0" text="De La" />
+                            <TableColumn fx:id="tableColumnData" prefWidth="75.0" text="Data" />
+                            <TableColumn fx:id="tableColumnStatus" prefWidth="75.0" text="Status" />
+                        </columns>
+                        <cursor>
+                            <Cursor fx:constant="DEFAULT" />
+                        </cursor>
+                    </TableView>
+               <HBox prefHeight="100.0" prefWidth="200.0">
+                  <children>
+                     <Accordion prefHeight="25.0" prefWidth="37.0" />
+                     <Button mnemonicParsing="false" onAction="#handleAddNewFriendship" text="Accept friend">
+                        <cursor>
+                           <Cursor fx:constant="HAND" />
+                        </cursor></Button>
+                     <Accordion prefHeight="25.0" prefWidth="19.0" />
+                     <Button mnemonicParsing="false" onAction="#handleRejectNewFriendship" text="Reject friend">
+                        <cursor>
+                           <Cursor fx:constant="HAND" />
+                        </cursor></Button>
+                  </children>
+               </HBox>
+                    <Accordion prefHeight="21.0" prefWidth="282.0" />
+                    <Label text="Cereri de prietenie trimise" />
+                    <TableView fx:id="tableFriendRequestsTo" prefHeight="179.0" prefWidth="322.0">
+                        <columns>
+                            <TableColumn fx:id="tableColumnTo" prefWidth="75.0" text="Catre" />
+                            <TableColumn fx:id="tableColumnData1" prefWidth="75.0" text="Data" />
+                            <TableColumn fx:id="tableColumnStatus1" prefWidth="75.0" text="Status" />
+                        </columns>
+                    </TableView>
+               <HBox prefHeight="100.0" prefWidth="200.0">
+                  <children>
+                     <Accordion prefHeight="25.0" prefWidth="37.0" />
+                     <Button mnemonicParsing="false" onAction="#handleRejectSentFriendship" text="Retract friendship">
+                        <cursor>
+                           <Cursor fx:constant="HAND" />
+                        </cursor></Button>
+                     <Accordion prefHeight="25.0" prefWidth="19.0" />
+                  </children>
+               </HBox>
+                </children>
+            </VBox>
+        </children>
+    </HBox>
+   <Button mnemonicParsing="false" onAction="#handleRefreshAllTables" text="Refresh">
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+   <ButtonBar prefHeight="40.0" prefWidth="200.0">
+     <buttons>
+       <Button mnemonicParsing="false" onAction="#handleMessages" text="Messages" />
+         <Button mnemonicParsing="false" text="Friend Requests" />
+         <Button mnemonicParsing="false" onAction="#handleLogOut" text="Log out">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+     </buttons>
+   </ButtonBar>
+</VBox>

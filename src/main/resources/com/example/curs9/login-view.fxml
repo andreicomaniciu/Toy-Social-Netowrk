@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #bedbd6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.curs9.LoginController">
+   <children>
+      <TextField fx:id="textFieldEmail" alignment="TOP_LEFT" layoutX="60.0" layoutY="160.0" prefHeight="22.0" prefWidth="149.0" promptText="Email">
+         <font>
+            <Font name="Tw Cen MT" size="16.0" />
+         </font></TextField>
+      <PasswordField fx:id="textFieldHidePassword" layoutX="60.0" layoutY="202.0" prefHeight="22.0" prefWidth="149.0" promptText="Password">
+         <font>
+            <Font name="Tw Cen MT" size="16.0" />
+         </font></PasswordField>
+      <TextField fx:id="textFieldSeePassword" layoutX="60.0" layoutY="202.0" promptText="Password" visible="false" />
+      <Button layoutX="85.0" layoutY="262.0" mnemonicParsing="false" onAction="#handleLogIn" prefHeight="37.0" prefWidth="99.0" stylesheets="@css/login.css" text="Log in!" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Tw Cen MT Bold" size="16.0" />
+         </font></Button>
+      <Label alignment="TOP_CENTER" layoutX="290.0" layoutY="95.0" prefHeight="55.0" prefWidth="149.0" text="New to Spicee?&#10;Don't miss out!&#10;">
+         <font>
+            <Font name="Calibri Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_CENTER" layoutX="108.0" layoutY="24.0" prefHeight="77.0" prefWidth="132.0" text="Need some&#10;Spicee?">
+         <font>
+            <Font name="Calibri Bold" size="27.0" />
+         </font>
+      </Label>
+      <Line endX="-1.0" endY="101.0" layoutX="255.0" layoutY="160.0" startX="-1.0" startY="-88.0" strokeWidth="2.0" />
+      <ImageView fx:id="imageLogo" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" onMouseEntered="#handleLogoAnimation" onMouseExited="#handleLogoAnimationOff" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/SpicedLogo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageDecorate4" fitHeight="88.0" fitWidth="72.0" layoutX="378.0" layoutY="213.0" opacity="0.25" pickOnBounds="true" preserveRatio="true" rotate="-23.2">
+         <image>
+            <Image url="@images/Spiceecropped.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageDecorate3" fitHeight="88.0" fitWidth="72.0" layoutX="358.0" layoutY="213.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="-23.2">
+         <image>
+            <Image url="@images/Spiceecropped.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageDecorate2" fitHeight="88.0" fitWidth="72.0" layoutX="333.0" layoutY="213.0" opacity="0.75" pickOnBounds="true" preserveRatio="true" rotate="-23.2">
+         <image>
+            <Image url="@images/Spiceecropped.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageDecorate1" fitHeight="88.0" fitWidth="72.0" layoutX="308.0" layoutY="213.0" onMouseEntered="#handleAnimationRotateOn" pickOnBounds="true" preserveRatio="true" rotate="-23.2">
+         <image>
+            <Image url="@images/Spiceecropped.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="eyePass" fitHeight="32.0" fitWidth="32.0" layoutX="215.0" layoutY="202.0" onMousePressed="#handleSeePass" onMouseReleased="#handleHidePass" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/HidePassThru.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="28.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/atIcon3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="28.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/lockThicc.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="315.0" layoutY="168.0" mnemonicParsing="false" onAction="#handleLogIn" prefHeight="37.0" prefWidth="99.0" stylesheets="@css/login.css" text="Sign up!" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Tw Cen MT Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
